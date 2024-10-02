@@ -1,5 +1,8 @@
+import {Suspense} from "react";
+
 export default function Page(){
     return(
+        <Suspense fallback={<div>Loading...</div>}>
         <div className={"max-w-screen-lg mx-auto"}>
             <h1 className={"text-2xl font-medium text-amber-600"}>About Page</h1>
             <div className={"text-lg font-medium space-y-3 mt-5 pb-5 border-b-2 border-gray-300"}>
@@ -32,5 +35,7 @@ export default function Page(){
 
 
         </div>
+        </Suspense>
     )
+
 }
