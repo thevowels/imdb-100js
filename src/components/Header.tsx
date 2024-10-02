@@ -5,7 +5,7 @@ import Link from "next/link";
 import DarkModeSwitch from "@/components/DarkModeSwitch";
 export default function Header() {
     return(
-        <div className="bg-blue-300 flex flex-row justify-between items-center py-5">
+        <div className="flex flex-row justify-between items-center py-5">
             <div className="flex space-x-5">
                 <div>
                     <MenuItem title={"home"} address={"/"} Icon={AiFillHome} />
