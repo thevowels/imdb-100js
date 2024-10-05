@@ -27,7 +27,7 @@ export default function MovieCard({result}:{result: Movie}) {
                 ></Image>
                 <div className={"p-2"}>
                     <p className={"line-clamp-2 text-sm"}>{result.overview}</p>
-                    <h2 className="font-semibold text-center text-lg">{result.title}</h2>
+                    <h2 className="font-semibold text-xl">{result.title}</h2>
                     <p className="flex flex-row h-10 item-center justify-between">
 
                         <span>
