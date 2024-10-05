@@ -2,7 +2,7 @@
 
 export default function DisplayMovie({id}: {id: string}) {
     return (
-        <div >
+        <div className="">
             <iframe
                 src={`https://vidsrc.to/embed/movie/${id}`}
                 allowFullScreen
@@ -20,6 +20,7 @@ export default function DisplayMovie({id}: {id: string}) {
             /* Extra-large screens (xl) */
             xl:w-[1280px] xl:h-[535px] /* 1280 / 2.39 ≈ 535px */
         mx-auto
+        bg-gray-500
         "
             ></iframe>
         </div>

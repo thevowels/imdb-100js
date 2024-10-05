@@ -10,7 +10,7 @@ export default async function Page({params}: {params: {id: string}}) {
 
     console.log(movie)
     return(
-        <div className={"w-full"}>
+        <div className={"w-full pb-14"}>
             <div
                 className={"p-4 md:pt-8 flex flex-col  md:flex-row items-center content-center max-w-6xl mx-auto md:space-x-6"}>
                 <Image alt={movie.title}
@@ -24,11 +24,11 @@ export default async function Page({params}: {params: {id: string}}) {
                        }}
                 />
                 <div>
-                    <h1>{movie.title}</h1>
+                    <h1 className="text-amber-500 font-bold text-3xl py-3 pl-2">{movie.title}</h1>
                     <p>{movie.overview}</p>
                 </div>
             </div>
-            <DisplayMovie id={movieId}/>
+            {/*<DisplayMovie id={movieId}/>*/}
         </div>
     )
 }
