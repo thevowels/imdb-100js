@@ -3,7 +3,6 @@ import {parse, format } from "date-fns"
 import {Movie} from "@/utils/Movie";
 import Link from "next/link";
 import Image from "next/image";
-import {FaThumbsUp} from "react-icons/fa";
 import {FiThumbsUp} from "react-icons/fi";
 
 export default function MovieCard({result}:{result: Movie}) {
@@ -37,7 +36,7 @@ export default function MovieCard({result}:{result: Movie}) {
                         </span>
                         <span className={"flex font-semibold"}>
                         <FiThumbsUp className={"font-bold ml-1 mr-2 "}/>
-                            {result.vote_count}
+                            {result.vote_average}
                         </span>
                     </p>
 

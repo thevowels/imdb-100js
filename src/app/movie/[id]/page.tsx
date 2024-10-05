@@ -1,5 +1,7 @@
 import Image from "next/image";
-import DisplayMovie from "@/components/movies/DisplayMovie";
+import {parse, format } from "date-fns"
+
+// import DisplayMovie from "@/components/movies/DisplayMovie";
 
 
 export default async function Page({params}: {params: {id: string}}) {
@@ -7,6 +9,8 @@ export default async function Page({params}: {params: {id: string}}) {
     const movieId = params.id
     const movie = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}&language=en-US`)
                                 .then(res => res.json())
+    let release_date = parse(movie.release_date, 'yyyy-MM-dd', new Date());
+    const releasedDate =format(release_date, "MMM d, yyyy");
 
     console.log(movie)
     return(
@@ -24,8 +28,10 @@ export default async function Page({params}: {params: {id: string}}) {
                        }}
                 />
                 <div>
-                    <h1 className="text-amber-500 font-bold text-3xl py-3 pl-2">{movie.title}</h1>
+                    <h1 className="text-amber-500 font-bold text-3xl mb-3 pl-2">{movie.title}</h1>
                     <p>{movie.overview}</p>
+                    <p className="pt-3"><span className={"font-semibold mr-2"}>Released Date:</span> {releasedDate}</p>
+                    <p className="pt-3"><span className={"font-semibold mr-2"}>Rating:</span> {movie.vote_average}</p>
                 </div>
             </div>
             {/*<DisplayMovie id={movieId}/>*/}
