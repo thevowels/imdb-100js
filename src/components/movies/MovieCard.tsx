@@ -27,7 +27,7 @@ export default function MovieCard({result}:{result: Movie}) {
                 <div className={"p-2"}>
                     <p className={"line-clamp-2 text-sm"}>{result.overview}</p>
                     <h2 className="font-semibold text-xl">{result.title}</h2>
-                    <p className="flex flex-row h-10 item-center justify-between">
+                    <div className="flex flex-row h-10 item-center justify-between">
 
                         <span>
                         <p className={"text-sm"}>
@@ -38,7 +38,7 @@ export default function MovieCard({result}:{result: Movie}) {
                         <FiThumbsUp className={"font-bold ml-1 mr-2 "}/>
                             {result.vote_average}
                         </span>
-                    </p>
+                    </div>
 
                 </div>
             </Link>
