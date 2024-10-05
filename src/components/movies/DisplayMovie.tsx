@@ -2,7 +2,12 @@
 
 export default function DisplayMovie({id}: {id: string}) {
     return (
-        <div className="
+        <div >
+            <iframe
+                src={`https://vidsrc.to/embed/movie/${id}`}
+                allowFullScreen
+                title="Embedded Video"
+                className="
             /* Small screens (sm) */
             sm:w-[640px] sm:h-[268px]  /* 640 / 2.39 ≈ 268px */
 
@@ -15,16 +20,7 @@ export default function DisplayMovie({id}: {id: string}) {
             /* Extra-large screens (xl) */
             xl:w-[1280px] xl:h-[535px] /* 1280 / 2.39 ≈ 535px */
         mx-auto
-        ">
-            <iframe
-                src={`https://vidsrc.to/embed/movie/${id}`}
-                allowFullScreen
-                style={{
-                    width: "100%",
-                    height: "100%",
-                }}
-                title="Embedded Video"
-
+        "
             ></iframe>
         </div>
     )
