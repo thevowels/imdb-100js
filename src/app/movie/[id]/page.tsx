@@ -32,7 +32,7 @@ export default async function Page({params}: {params: {id: string}}) {
                     <p className="pt-3"><span className={"font-semibold mr-2"}>Rating:</span> {movie.vote_average}</p>
                 </div>
             </div>
-            <DisplayMovie id={movieId}/>
+            {/*<DisplayMovie id={movieId}/>*/}
         </div>
     )
 }
