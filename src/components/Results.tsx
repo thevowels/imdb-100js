@@ -1,7 +1,6 @@
 import MovieCard from "@/components/movies/MovieCard";
 
 export default function Results({results}: { results:any[] }){
-    console.log(results)
 
 
     if(!Array.isArray(results)){
