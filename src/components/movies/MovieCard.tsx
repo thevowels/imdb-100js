@@ -7,6 +7,8 @@ import {FiThumbsUp} from "react-icons/fi";
 
 export default function MovieCard({result}:{result: Movie}) {
 
+
+
     let releasedDate = "Not available";
     let release_date  = parse(result.release_date, 'yyyy-MM-dd', new Date());
 

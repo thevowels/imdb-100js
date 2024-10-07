@@ -11,18 +11,23 @@ export default async function Page({params}: {params: {id: string}}) {
     let release_date = parse(movie.release_date, 'yyyy-MM-dd', new Date());
     const releasedDate =format(release_date, "MMM d, yyyy");
 
+    console.log(movie)
+
     return(
         <div className={"w-full pb-14"}>
             <div
                 className={"p-4 md:pt-8 flex flex-col  md:flex-row items-center content-center max-w-6xl mx-auto md:space-x-6"}>
                 <Image alt={movie.title}
-                       src={"https://image.tmdb.org/t/p/original" + movie.backdrop_path}
+                       src={"https://image.tmdb.org/t/p/original" + (movie.backdrop_path || movie.poster_path)}
                        width={500}
                        height={300}
                        className={"rounded-tl-2xl rounded-br-2xl"}
+                       placeholder="blur"
+                       blurDataURL={"/Spinner.svg"}
                        style={{
                            maxWidth: "100%",
-                           height: "100%",
+                           width:500,
+                           height:300,
                        }}
                 />
                 <div>
