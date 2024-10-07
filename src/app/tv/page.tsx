@@ -8,10 +8,7 @@ export default async function Page({searchParams}:{searchParams: { page?:number,
 
     return(
         <div className={"align-middle content-center"}>
-            {/*<TvResults results={res.results}/>*/}
-            *****
-            {res.results.length}
-
+            <TvResults results={res.results}/>
 
         </div>
     )
